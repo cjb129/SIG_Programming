@@ -1,3 +1,5 @@
+/* Made this simple flash card emulator for my little brother */
+
 #include<iostream>
 #include<cstdlib>
 #include<iomanip>
