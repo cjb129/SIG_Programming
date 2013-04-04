@@ -1,3 +1,4 @@
+// This program decides how many moves a Queen must make in order to travel from point A to point B on a chess board
 
 #include <iostream>
 #include <cstdlib>
