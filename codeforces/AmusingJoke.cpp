@@ -1,7 +1,5 @@
 #include <iostream>
 #include <string>
-#include <string.h>
-#include <algorithm>
 
 using namespace std;
 
