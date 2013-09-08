@@ -1,83 +1,68 @@
-#include<iostream>
-#include<vector>
-#include<algorithm>
+#include <iostream>
+#include <vector>
 
 using namespace std;
 
 int main() {
-	int children;
-	int groupSize;
-	vector<int> groups;
-	cin >> children;
 
-	for(int i = 0; i < children; i++) {
-		cin >> groupSize;
-		groups.push_back(groupSize);
-	}
-
-	sort(groups.rbegin(), groups.rend());
-
+	int one = 0, two = 0, three = 0, four = 0;
 	int taxi = 0;
+	int groups;
+	cin >> groups;
+	int grpsize;
+	vector<int> nums;
 
-	while (!groups.empty()) {
-		//for (int i = 0; i < groups.size(); i++) {
-		//	cout << groups[i];
-		//}
-		//cout << endl;
-		if(groups[0] == 4) {
-			groups.erase(groups.begin());
+	for(int i = 0; i < groups; i++) {
+		cin >> grpsize;
+		nums.push_back(grpsize);
+		if(nums[i] == 1)
+			one++;
+		else if (nums[i] == 2)
+			two++;
+		else if (nums[i] == 3)
+			three++;
+		else
+			taxi++;
+	}
+	
+	 do {
+		if (three >= 1 && one >= 1) {
+					three--;
+					one--;
+					taxi++;
+		}
+		else if (three >= 1 && one == 0) {
+					three--;
+					taxi++;
+		}
+		else if (two % 2 == 0 && two != 0) {
+			two -= 2;
 			taxi++;
 		}
-		else if(groups[0] == 3) {
-			bool found = false;
-			for (int i = 0; i < groups.size(); i++) {
-				if (groups[i] == 1) {
-					groups.erase(groups.begin() + i);
-					groups.erase(groups.begin());
-					taxi++;
-					found = true;
-					break;
-				}
-				
-			}
-			if (!found) {
-				groups.erase(groups.begin());
-				taxi++;
-			}
-
+		else if(two >= 1 && one >= 2) {
+			one -= 2;
+			two--;
+			taxi++;
 		}
-		else if(groups[0] == 2) {
-			groups.erase(groups.begin());
-			if (groups.empty())
-				taxi++;
-			for (int i = 0; i < groups.size(); i++) {
-				if (groups[i] == 2) {
-					groups.erase(groups.begin());
-					taxi++;
-					break;
-				}
-				else if (groups[i] == 1 && i < groups.size() - 1) {
-					groups.erase(groups.begin() + i);
-					groups.erase(groups.begin() + i);
-					taxi++;
-					break;
-				}
-				else {
-					groups.erase(groups.begin());
-					taxi++;
-					break;
-				}
-			}
+		else if (two >= 1 && one == 1) {
+			one--;
+			two--;
+			taxi++;
+		}
+		else if (two >= 1 && one == 0) {
+			two--;
+			taxi++;
 		}
 		else {
-			int ones = groups.size();
-			int grps = (ones + 3) / 4;
-			taxi += grps;
+			taxi += (one + 3) / 4;
 			break;
-		}
-	}
-	//cout << groups.size() << endl;
-	cout << taxi << endl;
+		} 
+		
+	}while(one || two || three);
+
+	//cout << one << " " << two << " " << three << " " << four << " taxi: " << taxi << endl;
+	cout << taxi;
+
 	//system("pause");
 
 	return 0;
