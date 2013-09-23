@@ -1,7 +1,5 @@
-/*
- Theatre square is n x m. It is to re-paved with a x a stones.
- How many stones does it take to re-pave theatre square?
- */
+//Theatre Square problem from Codeforces
+//http://codeforces.com/problemset/problem/1/A
 
 #include <iostream>
 #include <cmath>
