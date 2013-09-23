@@ -1,3 +1,6 @@
+//String Task problem from Codeforces
+//http://codeforces.com/problemset/problem/118/A
+
 #include<iostream>
 #include<string>
 #include<ctype.h>
