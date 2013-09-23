@@ -1,3 +1,6 @@
+//Canvas Frames problem from Codeforces
+//http://codeforces.com/problemset/problem/127/B
+
 #include <iostream>
 #include <vector>
 
