@@ -1,3 +1,7 @@
+//Amusing joke from Codeforces
+//http://codeforces.com/problemset/problem/141/A
+
+
 #include <iostream>
 #include <string>
 
