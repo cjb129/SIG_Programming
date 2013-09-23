@@ -1,3 +1,6 @@
+//Nearly Lucky Number problem from Codeforces
+//http://codeforces.com/problemset/problem/110/A
+
 #include <iostream>
 #include <string>
 
