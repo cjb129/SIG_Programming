@@ -1,4 +1,5 @@
 //Ultra Fast Mathemitician, solved 2/22/14
+//http://codeforces.com/problemset/problem/61/A
 
 #include<iostream>
 #include<vector>
