@@ -1,52 +1,42 @@
-//Amusing joke from Codeforces
+//Amusing Joke, solved 3/3/14
 //http://codeforces.com/problemset/problem/141/A
 
 
-#include <iostream>
-#include <string>
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
 
 using namespace std;
 
-string sortArray (string ar, int size) {
-	bool swap;
-	char temp;
-	
-	do {
-		swap = false;
-		for (int i = 0; i < (size-1); i++) {
-			if (ar[i] > ar[i+1]) {
-				temp = ar[i];
-				ar[i]=ar[i+1];
-				ar[i+1]=temp;
-				swap = true;
-			}
-		}
-	}while (swap);
-	return ar;
-}
-
 int main() {
 
-	string A;
-	cin >> A;
-	string B;
-	cin >> B;
-	string C;
-	cin >> C;
+	string a, b, c, e;
 
-	string newS = A.append(B);
-	
-
-	string sortedC = sortArray(C, C.length());
-	string sortedNew = sortArray(newS, newS.length());
+	cin >> a >> b >> c;
 
 
-	 
-	if (sortedNew == sortedC)
+	vector<char> newC, newStr;
+
+	for(int i = 0; i < c.size(); i++) {
+		newC.push_back(c[i]);
+	}
+
+	e = a.append(b);
+
+	for(int i = 0; i < e.size(); i++) {
+		newStr.push_back(e[i]);
+	}
+
+	sort(newC.begin(), newC.end());
+	sort(newStr.begin(), newStr.end());
+
+	if(newC == newStr) {
 		cout << "YES";
-	else
+	}
+	else {
 		cout << "NO";
-
+	}
 
 
 	//system("pause");
