@@ -1,3 +1,6 @@
+//Game With Sticks, solved 8/29/14
+//http://codeforces.com/problemset/problem/451/A
+
 #include<iostream>
 
 using namespace std;
