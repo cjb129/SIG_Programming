@@ -1,3 +1,6 @@
+//Rewards, solved 9/5/14
+//http://codeforces.com/problemset/problem/448/A
+
 #include<iostream>
 
 using namespace std;
